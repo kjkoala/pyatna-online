@@ -1,0 +1,37 @@
+.cell {
+  width: 60px;
+  height: 60px;
+  background: yellow;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  filter: hue-rotate(calc(60deg * var(--i)));
+  font-size: 25px;
+  font-family: 'Arial';
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px rgba(0,0,0, 0.5);
+  box-shadow: inset -1px 0 1px 0 white, inset 0 -1px 1px 0 black;
+  transition: transform 150ms ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.cell span {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-image: linear-gradient(42deg, rgba(255, 255, 255, 0.5) 50%, rgba(0, 0, 0, 0.30));
+}
+
+.null {
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  cursor: default;
+}

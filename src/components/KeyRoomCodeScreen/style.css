@@ -1,0 +1,124 @@
+.display-id {
+  width: 320px;
+  margin: auto;
+  text-align: center;
+  border-radius: 5px;
+  position: relative;
+  padding: 10px;
+}
+
+.head {
+  font-size: 1.2rem;
+  padding: 15px;
+  color: cornflowerblue;
+  font-weight: bold;
+}
+
+.scissors {
+  margin: 0 auto;
+  width: 40px;
+  animation: scis infinite ease-in-out 2s;
+}
+
+@keyframes scis {
+  0% {
+    transform: rotate(10deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(30deg);
+  }
+  30% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(60deg);
+  }
+  40% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
+.input {
+  width: 80%;
+  text-align: center;
+}
+
+.button {
+  margin: 15px;
+  margin-bottom: 0;
+}
+
+.note {
+  padding: 15px;
+  font-size: 0.9rem;
+  color: darkgray;
+}
+
+.display-id svg,
+.display-id svg rect {
+  position:absolute;
+  top: 0;
+  left: 0;
+  height: 225px;
+  width: 100%;
+  fill: transparent;
+  pointer-events: none;
+}
+
+.display-id svg rect {
+  stroke: #ccc;
+  stroke-width: 2;
+  stroke-dasharray: 10;
+  animation: animate 15s linear infinite;
+}
+
+@keyframes animate {
+  0%{
+    stroke-dashoffset: 800;
+  }
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
+.notify {
+  width: 95%;
+  height: 80%;
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0;
+}
+
+.notify.error {
+  background: #b33;
+  display: flex;
+  animation: notify 1000ms linear;
+}
+
+.notify.success {
+  background: #33bb4f;
+  display: flex;
+  animation: notify 2000ms linear;
+}
+
+@keyframes notify {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
